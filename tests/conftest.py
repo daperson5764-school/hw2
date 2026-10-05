@@ -1,16 +1,3 @@
-"""
-Shared pytest fixtures for the Task 4 adversarial test suite.
-
-This file lives in tests/ while the task modules (handshake.py, secure_record.py,
-ffdhe3072.pem) live in the parent directory. The sys.path insert below puts that
-parent directory on the import path, so the suite runs no matter which folder you
-invoke pytest from (the project root or tests/ itself).
-
-Long-term RSA identity keys are generated ONCE for the whole test session (they
-are long-term by definition), so only the cheap ephemeral Diffie-Hellman values
-are regenerated per test, while each test still gets fresh parties for isolation.
-"""
-
 import os
 import sys
 
